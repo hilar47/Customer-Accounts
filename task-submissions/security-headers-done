@@ -1,0 +1,16 @@
+nosetests -vv --with-spec --spec-color --with-coverage --cover-erase --cover-package=service
+nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+Accounts service should return security headers ... ok
+Accounts service should return CORS headers ... ok
+...
+----------------------------------------------------------------------
+Ran 28 tests in 1.456s
+
+OK
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+service/__init__.py              25      0   100%
+service/models.py                45      0   100%
+service/routes.py                80      0   100%
+-----------------------------------------------------------
+TOTAL                           180      0   100%

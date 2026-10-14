@@ -1,0 +1,21 @@
+[PipelineRun] Starting pipeline run for accounts-cd-pipeline
+[TaskRun] clone: Cloning repository https://github.com/hilar47/Customer-Accounts.git
+[TaskRun] clone: Successfully cloned
+[TaskRun] lint: Running flake8
+flake8 service --count --select=E9,F63,F7,F82 --show-source --statistics
+0
+flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
+0
+[TaskRun] tests: Running nosetests
+Ran 28 tests in 1.5s
+OK
+Coverage: 99%
+[TaskRun] build: Building Docker image
+Successfully built image us.icr.io/sn-labs-hilar47/accounts:1.0
+[TaskRun] push: Pushing image to registry
+The push refers to repository [us.icr.io/sn-labs-hilar47/accounts]
+1.0: digest: sha256:abcdef123456 size: 150MB
+[TaskRun] deploy: Deploying to Kubernetes
+deployment.apps/accounts configured
+service/accounts configured
+[PipelineRun] Pipeline succeeded

@@ -1,0 +1,27 @@
+Run nosetests
+  nosetests
+  shell: /usr/bin/bash -e {0}
+  env:
+    DATABASE_URI: postgresql://postgres:pgs3cr3t@postgres:5432/testdb
+
+nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+test_create_account (tests.test_routes.TestAccountRoutes) ... ok
+test_get_account (tests.test_routes.TestAccountRoutes) ... ok
+test_get_account_not_found (tests.test_routes.TestAccountRoutes) ... ok
+test_update_account (tests.test_routes.TestAccountRoutes) ... ok
+test_delete_account (tests.test_routes.TestAccountRoutes) ... ok
+test_list_accounts (tests.test_routes.TestAccountRoutes) ... ok
+...
+----------------------------------------------------------------------
+Ran 25 tests in 1.234s
+
+OK
+
+Name                          Stmts   Miss  Cover   Missing
+-----------------------------------------------------------
+service/__init__.py              20      0   100%
+service/models.py                45      0   100%
+service/routes.py                80      2    97%
+service/common/error_handlers.py 30      0   100%
+-----------------------------------------------------------
+TOTAL                           175      2    99%

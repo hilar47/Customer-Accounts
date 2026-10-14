@@ -1,0 +1,5 @@
+{
+  "name": "Account Demo REST API Service",
+  "version": "1.0",
+  "description": "This is a sample account service for an e-commerce website"
+}
